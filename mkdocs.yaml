@@ -4,58 +4,53 @@ site_url: https://perilkeeper.dev
 repo_url: https://github.com/your-org/perilkeeper-site
 edit_uri: edit/main/docs/
 
-
 theme:
-name: material
-features:
-- navigation.tabs
-- navigation.instant
-- navigation.tracking
-- content.code.copy
-- content.action.edit
-- search.suggest
-- search.highlight
-- header.autohide
-palette:
-- scheme: default
-primary: indigo
-accent: indigo
-logo: assets/logo.svg
-favicon: assets/favicon.png
-
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
 
 nav:
-- Home: index.md
-- Language: language.md
-- Examples: examples.md
-- Use cases: use-cases.md
-- Architecture: architecture.md
-- Pricing: pricing.md
-
+  - Home: index.md
+  - Language: language.md
+  - Examples: examples.md
+  - Use cases: use-cases.md
+  - Architecture: architecture.md
+  - Pricing: pricing.md
 
 markdown_extensions:
-- admonition
-- attr_list
-- def_list
-- footnotes
-- pymdownx.highlight
-- pymdownx.inlinehilite
-- pymdownx.superfences
-- pymdownx.details
-- pymdownx.snippets
-- pymdownx.tilde
-
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.tilde
 
 plugins:
-- search
-
+  - search
 
 extra:
-social:
-- icon: fontawesome/brands/github
-link: https://github.com/your-org
-- icon: fontawesome/brands/x-twitter
-link: https://x.com/yourhandle
-analytics:
-provider: plausible
-domain: perilkeeper.dev
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-org
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/yourhandle
+  analytics:
+    provider: plausible
+    domain: perilkeeper.dev
