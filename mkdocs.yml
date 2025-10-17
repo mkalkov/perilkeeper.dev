@@ -21,8 +21,8 @@ theme:
     - scheme: slate
       primary: custom
       accent: custom
-  logo: assets/logos/perilkeeper-wordmark.svg
-  favicon: assets/favicon.png
+  logo: assets/favicon.png
+  favicon: assets/favicon.ico
 
 extra_css:
   - assets/styles/brand.css
