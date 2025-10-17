@@ -1,0 +1,168 @@
+/* === ЛОКАЛЬНЫЕ ШРИФТЫ (OFFLINE) === */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("../fonts/Orbitron-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("../fonts/Orbitron-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-normal-latin.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+                 U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-normal-latin-ext.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+                 U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+                 U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-italic-latin.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+                 U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-italic-lating-ext.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+                 U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+                 U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+
+/* === БАЗОВЫЕ СЕМЕЙСТВА ДЛЯ MATERIAL === */
+:root {
+  --md-text-font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --md-code-font: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* === БРЕНД-ЦВЕТА PERILKEEPER === */
+:root {
+  --pk-deep-steel: #243447;
+  --pk-iron-gray:  #5A6772;
+  --pk-amber:      #E2A93B;
+  --pk-offwhite:   #F3F3F3;
+
+  --md-primary-fg-color: var(--pk-deep-steel);
+  --md-primary-fg-color--light: #2c445b;
+  --md-primary-fg-color--dark:  #1a2633;
+  --md-accent-fg-color: var(--pk-amber);
+}
+
+/* Тёмная схема (если включена) */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--pk-deep-steel);
+  --md-accent-fg-color: var(--pk-amber);
+}
+
+/* === НАДПИСЬ В ХЕДЕРЕ (PERILKEEPER): Orbitron, слегка растянуть по X === */
+.md-header__title, .md-header-nav__title {
+  font-family: "Orbitron", var(--md-text-font);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transform: scaleX(1.02);
+  transform-origin: left center;
+}
+
+/* Заголовки страниц: строгие, но без перегруза */
+.md-typeset h1, .md-typeset h2 {
+  font-family: "Orbitron", var(--md-text-font);
+  letter-spacing: 0.01em;
+}
+
+/* Блоки с "летописным" тоном Perilscribe — класс .perilscribe поставим в Markdown */
+.perilscribe h1, .perilscribe h2, .perilscribe h3,
+.perilscribe .md-typeset blockquote {
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  letter-spacing: 0.003em;
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+/* Ссылки/акцентные элементы */
+.md-typeset a { text-underline-offset: .15em; }
+.md-typeset a:hover { text-decoration: underline; }
+
+/* Код */
+.md-typeset code, .md-typeset pre code {
+  font-family: var(--md-code-font);
+  font-feature-settings: "calt" 0;
+}
+
+/* Небольшой "янтарный" акцент для заметок */
+.md-typeset .admonition.note > .admonition-title::before,
+.md-typeset details.note > summary::before {
+  color: var(--pk-amber);
+}
+
+/* === ВОРДМАРКИ (если используете SVG вместо текста для кастомной K/S) === */
+.pk-wordmark {
+  display: inline-flex; align-items: center; gap: .5rem;
+}
+.pk-wordmark img, .pk-wordmark svg {
+  height: 34px; /* подогнайте под ваш хедер */
+}
+

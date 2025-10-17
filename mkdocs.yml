@@ -2,7 +2,6 @@ site_name: Perilkeeper
 site_description: "Risk analysis for cyber, safety, and quality — code-centric and build-integrated."
 site_url: https://perilkeeper.dev
 repo_url: https://github.com/your-org/perilkeeper-site
-edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -12,16 +11,21 @@ theme:
     - navigation.instant
     - navigation.tracking
     - content.code.copy
-    - content.action.edit
     - search.suggest
     - search.highlight
     - header.autohide
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
-  logo: assets/logo.svg
+      primary: custom
+      accent: custom
+    - scheme: slate
+      primary: custom
+      accent: custom
+  logo: assets/logos/perilkeeper-wordmark.svg
   favicon: assets/favicon.png
+
+extra_css:
+  - assets/styles/brand.css
 
 nav:
   - Home: index.md
