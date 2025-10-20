@@ -6,7 +6,7 @@ hide:
 
 # Meet **Perilkeeper**
 
-A code‑centric way to model and manage cyber, safety, and quality risks — right inside your build.
+A code‑centric way to model and manage cybersecurity, safety, and quality risks — right inside your build.
 
 > Describe your components in a simple DSL, and Perilkeeper turns them into actionable risk reports during CI.
 
@@ -20,10 +20,9 @@ A code‑centric way to model and manage cyber, safety, and quality risks — ri
 ## Quick glance
 
 ```console
-# Define components & threats in repo
-$ perilscribe components.yaml threats.yaml
-# Get a report in CI
-$ perilkeeper build --report out/report.html
+# Create components.pspec and threats.pspec
+# Calculate risks and get a report
+$ pk build --report out/report.html
 ```
 
 [Explore the DSL »](language.md){ .md-button }
