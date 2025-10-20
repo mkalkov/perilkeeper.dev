@@ -1,7 +1,7 @@
 site_name: Perilkeeper
 site_description: "Risk analysis for cyber, safety, and quality — code-centric and build-integrated."
 site_url: https://perilkeeper.dev
-repo_url: https://github.com/your-org/perilkeeper-site
+repo_url: https://github.com/mkalkov/perilkeeper.dev
 
 theme:
   name: material
@@ -56,9 +56,14 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-org
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/yourhandle
+      link: https://github.com/mkalkov/perilkeeper.dev
   analytics:
     provider: plausible
     domain: perilkeeper.dev
+  meta:
+    - property: og:site_name
+      content: Perilkeeper
+    - property: og:image
+      content: https://perilkeeper.dev/assets/favicon.png
+    - name: theme-color
+      content: "#243447"

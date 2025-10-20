@@ -1,4 +1,4 @@
-/* === ЛОКАЛЬНЫЕ ШРИФТЫ (OFFLINE) === */
+/* === LOCAL FONTS (OFFLINE) === */
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Variable.woff2") format("woff2");
@@ -83,7 +83,7 @@
 }
 @font-face {
   font-family: "Merriweather";
-  src: url("../fonts/Merriweather-italic-lating-ext.woff2") format("woff2");
+  src: url("../fonts/Merriweather-italic-latin-ext.woff2") format("woff2");
   font-weight: 300 900;
   font-style: italic;
   font-display: swap;
@@ -94,32 +94,32 @@
 
 
 
-/* === БАЗОВЫЕ СЕМЕЙСТВА ДЛЯ MATERIAL === */
+/* === BASE FONT FAMILIES FOR MATERIAL THEME === */
 :root {
   --md-text-font: "Inter", system-ui, -apple-system, Segoe UI, "Helvetica Neue", Arial, sans-serif;
   --md-code-font: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 
-/* === БРЕНД-ЦВЕТА PERILKEEPER === */
+/* === PERILKEEPER BRAND COLORS === */
 :root {
   --pk-deep-steel: #243447;
   --pk-iron-gray:  #5A6772;
-  --pk-amber:      #E2A93B;
+  --pk-burnt-amber:     #C97B3B;
   --pk-offwhite:   #F3F3F3;
 
   --md-primary-fg-color: var(--pk-deep-steel);
   --md-primary-fg-color--light: #2c445b;
   --md-primary-fg-color--dark:  #1a2633;
-  --md-accent-fg-color: var(--pk-amber);
+  --md-accent-fg-color: var(--pk-burnt-amber);
 }
 
-/* Тёмная схема (если включена) */
+/* Dark scheme (if enabled) */
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: var(--pk-deep-steel);
-  --md-accent-fg-color: var(--pk-amber);
+  --md-accent-fg-color: var(--pk-burnt-amber);
 }
 
-/* === НАДПИСЬ В ХЕДЕРЕ (PERILKEEPER): Orbitron, слегка растянуть по X === */
+/* === HEADER TITLE (PERILKEEPER): Orbitron, slightly stretch on X === */
 .md-header__title, .md-header-nav__title {
   font-family: "Orbitron", var(--md-text-font);
   font-weight: 700;
@@ -128,13 +128,13 @@
   transform-origin: left center;
 }
 
-/* Заголовки страниц: строгие, но без перегруза */
+/* Page headings: clean, not heavy */
 .md-typeset h1, .md-typeset h2 {
   font-family: "Orbitron", var(--md-text-font);
   letter-spacing: 0.01em;
 }
 
-/* Блоки с "летописным" тоном Perilscribe — класс .perilscribe поставим в Markdown */
+/* Perilscribe long-form tone — use the .perilscribe class in Markdown */
 .perilscribe h1, .perilscribe h2, .perilscribe h3,
 .perilscribe .md-typeset blockquote {
   font-family: "Merriweather", Georgia, "Times New Roman", serif;
@@ -142,27 +142,53 @@
   font-feature-settings: "liga" 1, "kern" 1;
 }
 
-/* Ссылки/акцентные элементы */
-.md-typeset a { text-underline-offset: .15em; }
+/* Links / accent elements */
+.md-typeset a { color: var(--pk-burnt-amber); text-underline-offset: .15em; }
 .md-typeset a:hover { text-decoration: underline; }
 
-/* Код */
+/* Code */
 .md-typeset code, .md-typeset pre code {
   font-family: var(--md-code-font);
   font-feature-settings: "calt" 0;
 }
 
-/* Небольшой "янтарный" акцент для заметок */
+/* Subtle "amber" accent for notes */
 .md-typeset .admonition.note > .admonition-title::before,
 .md-typeset details.note > summary::before {
-  color: var(--pk-amber);
+  color: var(--pk-burnt-amber);
 }
 
-/* === ВОРДМАРКИ (если используете SVG вместо текста для кастомной K/S) === */
+/* === WORDMARKS (if using SVG instead of text for custom K/S) === */
 .pk-wordmark {
   display: inline-flex; align-items: center; gap: .5rem;
 }
 .pk-wordmark img, .pk-wordmark svg {
-  height: 34px; /* подогнайте под ваш хедер */
+  height: 34px; /* adjust for your header */
 }
+
+/* === Brand token aliases (compat with brandbook) === */
+:root {
+  --pk-color-primary: var(--pk-deep-steel);
+  --pk-color-surface: var(--pk-offwhite);
+  --pk-color-muted:   var(--pk-iron-gray);
+  --pk-color-accent:  var(--pk-burnt-amber);
+  --pk-color-danger:  #D64545;
+}
+.md-typeset { color: var(--pk-color-primary); }
+
+/* Mermaid styling per brandbook */
+.mermaid .node rect, .mermaid .node path { stroke: var(--pk-color-primary); fill: var(--pk-color-surface); }
+.mermaid .edgeLabel, .mermaid .label { color: var(--pk-color-primary); }
+.mermaid .critical > * { stroke: var(--pk-color-danger) !important; }
+.mermaid .feasible { stroke: var(--pk-color-accent) !important; stroke-width: 3px; }
+
+/* Badge styles per brandbook */
+.md-typeset .pk-badge {
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem;
+  font-weight: 600;
+  display: inline-block;
+}
+.pk-badge--high { background: var(--pk-color-accent); color: var(--pk-color-primary); }
+.pk-badge--critical { background: var(--pk-color-danger); color: #fff; }
 

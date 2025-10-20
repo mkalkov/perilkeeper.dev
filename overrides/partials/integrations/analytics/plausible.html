@@ -1,1 +1,1 @@
-<script defer data-domain="perilkeeper.dev" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="{{ config.extra.analytics.domain }}" src="{{ config.extra.analytics.script | default('https://plausible.io/js/script.js') }}"></script>

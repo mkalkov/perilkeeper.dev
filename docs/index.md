@@ -20,9 +20,9 @@ A code‑centric way to model and manage cybersecurity, safety, and quality risk
 ## Quick glance
 
 ```console
-# Create components.pspec and threats.pspec
+# Create damages.pkspec and threats.pkspec
 # Calculate risks and get a report
-$ pk build --report out/report.html
+$ perilkeeper build --report out/report.html
 ```
 
 [Explore the DSL »](language.md){ .md-button }
@@ -47,9 +47,9 @@ $ pk build --report out/report.html
 ## Try it locally
 
 ```bash
-pipx install perilkeeper  # or: pip install perilkeeper
-perilkeeper init          # scaffold demo project
-perilkeeper build         # produce a local report
+curl -fsSL "$PERILKEEPER_URL"   # or add it as an NPM, pipx or Maven dependency
+pkspec build                    # validate Perilkeeper specs and calculate risks
+pkspec report                   # produce a risk report
 ```
 
 ---

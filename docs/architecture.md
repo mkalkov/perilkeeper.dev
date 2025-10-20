@@ -15,5 +15,5 @@ flowchart LR
   C --> E(CI status)
 ```
 
-**Integrations (planned):** Stripe/Lemon‑Squeezy for premium, Neo4j export, AI‑assisted scaffolding.
+**Integrations (planned):** Stripe/Lemon Squeezy for premium, Neo4j export, AI‑assisted scaffolding.
 
