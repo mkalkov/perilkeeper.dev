@@ -1,5 +1,7 @@
 ---
 title: Examples
+hide:
+  - navigation
 ---
 
 ### 1) Microservice with auth and storage

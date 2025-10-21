@@ -1,5 +1,7 @@
 ---
 title: Architecture
+hide:
+  - navigation
 ---
 
 - **Parser** for Perilscribe DSL → AST

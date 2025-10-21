@@ -158,6 +158,11 @@
   color: var(--pk-burnt-amber);
 }
 
+ /* limit width for better readability */
+.md-grid {
+  max-width: 50rem;
+}
+
 /* === WORDMARKS (if using SVG instead of text for custom K/S) === */
 .pk-wordmark {
   display: inline-flex; align-items: center; gap: .5rem;

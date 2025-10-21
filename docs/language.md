@@ -1,5 +1,7 @@
 ---
-title: Perilscribe DSL
+title: PerilSpec DSL
+hide:
+  - navigation
 ---
 
 Perilscribe is a compact, SQL‑inspired language to describe components, risks, mitigations, and relationships.

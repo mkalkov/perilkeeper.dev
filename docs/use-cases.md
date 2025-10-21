@@ -1,5 +1,7 @@
 ---
 title: How it fits your workflow
+hide:
+  - navigation
 ---
 
 ## Typical flow (15 minutes)

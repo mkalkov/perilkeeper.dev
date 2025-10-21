@@ -1,5 +1,5 @@
-site_name: Perilkeeper
-site_description: "Risk analysis for cyber, safety, and quality — code-centric and build-integrated."
+site_name: PerilKeeper
+site_description: "PerilKeper — code-centric way to manage cybersecurity, safety and quality risks."
 site_url: https://perilkeeper.dev
 repo_url: https://github.com/mkalkov/perilkeeper.dev
 
