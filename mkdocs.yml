@@ -32,7 +32,7 @@ nav:
   - Language: language.md
   - Examples: examples.md
   - Use cases: use-cases.md
-  - Architecture: architecture.md
+  - Installation: installation.md
 
 markdown_extensions:
   - admonition

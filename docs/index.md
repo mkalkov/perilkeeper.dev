@@ -106,17 +106,31 @@ $ perilkeeper gather assets.pkspec threats.pkspec
 $ perilkeeper report --format pdf
 ```
 
-## Step 5. Take a risk treatment decision
+<div class="pk-badge--high">
+TBD: Sample report screenshot
+</div>
 
-Lorem ipsum dolor sit amet...
+## Step 5. Take a risk treatment decision and describe mitigations
+
+```console
+SYSTEM "Payment Gateway"
+    DESIGN_GOAL "Prevent unauthorized data access"  # new design goal
+
+MITIGATION "WAF Configuration"                      # new implementation
+    REALIZES "Prevent unauthorized data access"
+    ON "Payment Gateway"
+    AFFECTS "Find Injection Point"
+        window_of_opportunity: -10,
+        skills_required: +2
+    AFFECTS "Exploit SQL Injection"
+        window_of_opportunity: -8,
+        skills_required: +3
+```
 
 ---
 
 ## Learn more
 
 [Explore the DSL »](language.md){ .md-button }
-[See examples »](examples.md){ .md-button }
-[Installation »](installation.md){ .md-button .md-button--primary }
-
-Still evaluating? Jump to a use‑case walkthrough: **[From DSL to report in CI](use-cases.md)**.
-
+[Jump to a use-case walkthrough »](use-cases.md){ .md-button }
+[Install PerilKeeper »](installation.md){ .md-button .md-button--primary }
